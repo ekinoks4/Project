@@ -1,0 +1,53 @@
+models:
+  - name: stg_procurements
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: buyer
+        data_type: string
+      - name: data_accessed
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: id
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: procurement_number
+        data_type: number
+      - name: project_id
+        data_type: string
+      - name: publish_date
+        data_type: string
+      - name: source
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: title
+        data_type: string
+      - name: type
+        data_type: string
+
+
+  - name: stg_bids
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: data_accessed
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: procurement_number
+        data_type: number
+        constraints:
+          - type: not_null
+      - name: source
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: supplier
+        data_type: string
+      - name: value
+        data_type: string

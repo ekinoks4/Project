@@ -1,0 +1,11 @@
+sources:
+  - name: DBT_SCHEMA
+    database: PROCUREMENT  
+    schema: DBT_SCHEMA  
+    tables:
+      - name: BIDS_12
+      - name: BIDS_34
+      - name: BIDS_56
+      - name: PROCUREMENT_12
+      - name: PROCUREMENT_34
+      - name: PROCUREMENT_56

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+    - name: procurement_with_bids
+      description: "An indermediate model which combines procurement and bids data"
