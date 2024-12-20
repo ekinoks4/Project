@@ -6,7 +6,7 @@ models:
     columns:
       - name: buyer
         data_type: string
-      - name: data_accessed
+      - name: date_accessed
         data_type: string
         constraints:
           - type: not_null
@@ -35,7 +35,7 @@ models:
       contract:
         enforced: true
     columns:
-      - name: data_accessed
+      - name: date_accessed
         data_type: string
         constraints:
           - type: not_null

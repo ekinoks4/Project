@@ -1,3 +1,5 @@
+{{ config(materialized="table") }}
+
 select {{ unpack_bid_json(data) }}
 from {{ source("DBT_SCHEMA", "BIDS_12") }}
 union all

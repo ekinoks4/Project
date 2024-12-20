@@ -1,3 +1,4 @@
 select 
-{{unpack_json(data)}}
-from PROCUREMENT.DBT_SCHEMA.PROCUREMENT_12
+* from {{ref("procurements_page")}}
+where procurement_number=145
+and source=12
