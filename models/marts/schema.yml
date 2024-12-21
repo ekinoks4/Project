@@ -1,69 +1,88 @@
 models:
   - name: company_profile_page
+    description: This table is the output table created for company profile page in the platform. 
     config:
       contract:
         enforced: true
     columns:
       - name: supplier
+        description: Name of the bidder.
         data_type: string
         constraints:
           - type: not_null
       - name: title
+        description: Title of the procurement content.
         data_type: string
         constraints:
           - type: not_null
       - name: bid_amount
+        description: Bid monetary value.
         data_type: float
         constraints:
           - type: not_null
       - name: currency
+        description: Currency of the bid amount.
         data_type: string
       - name: is_winner_bid
+        description: A flag showing if the bid is a winner bid or not. Winner bid when true. 
         data_type: boolean
-      - name: total_number_of_bids
-        data_type: integer
-      - name: total_number_of_winner_bids
-        data_type: integer
       - name: buyer
+        description: Name of the buyer organization.
         data_type: string
       - name: type
+        description: Type of announcement made regarding the procurement.
         data_type: string
       - name: source
+        description: Source code of the procurements.
         data_type: string
         constraints:
           - type: not_null
       - name: procurement_number
+        description: Number of the Procurement the bid is related with.
         data_type: integer
       - name: publish_date
+        description: Date when the procurement has been published on the source website.
         data_type: string
 
 
   - name: procurements_page
+    description: This table is the output table created for procurements page in the platform. 
     config:
       contract:
         enforced: true
     columns:
-      - name: winner_supplier
-        data_type: string
-      - name: title
+      - name: procurement_number
+        description: Number of the Procurement the bid is related with
+        data_type: integer
+      - name: source  
+        description: Source code of the procurements.
         data_type: string
         constraints:
           - type: not_null
-      - name: winner_bid_amount
-        data_type: float
-      - name: currency
+      - name: title
+        description: Title of the procurement content.
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: publish_date
+        description: Date when the procurement has been published on the source website.
+        data_type: string
+      - name: buyer
+        description: Name of the buyer organization.
         data_type: string
       - name: number_of_bids
+        description: Total number of bids submitted for the given procurement.
         data_type: integer
-      - name: buyer
+      - name: winner_supplier
+        description: Name of the supplier that won the bid.
+        data_type: string
+      - name: winner_bid_amount
+        description: The bid amount submitted by winner supllier.
+        data_type: float
+      - name: currency
+        description: Currency of the winner bid amount.
         data_type: string
       - name: type
+        description: Type of announcement made regarding the procurement.
         data_type: string
-      - name: source
-        data_type: string
-        constraints:
-          - type: not_null
-      - name: procurement_number
-        data_type: integer
-      - name: publish_date
-        data_type: string
+      

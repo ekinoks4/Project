@@ -2,4 +2,49 @@ version: 2
 
 models:
     - name: procurement_with_bids
-      description: "An indermediate model which combines procurement and bids data"
+      description: This indermediate table contains the joined procurement and bids data. Data formatting and cleaning requirements are applied in this model. 
+      columns:
+            - name: buyer
+              description: Name of the buyer organization.
+              data_type: string
+            - name: procurement_id
+              description: Unique identifier of the procurement.
+              data_type: string
+              constraints:
+                - type: not_null
+            - name: procurement_number
+              description: Number of the Procurement the bid is related with.
+              data_type: integer
+              constraints:
+                - type: not_null
+            - name: project_id
+              description: Project ID assigned to the procurement.
+              data_type: string
+            - name: publish_date
+              description: Date when the procurement has been published on the source website.
+              data_type: string
+            - name: source
+              description: Source code of the procurements.
+              data_type: string
+              constraints:
+                - type: not_null
+            - name: title
+              description: Title of the procurement content.
+              data_type: string
+              constraints:
+                - type: not_null
+            - name: type
+              description: Type of announcement made regarding the procurement.
+              data_type: string
+            - name: supplier
+              description: Name of the bidder.
+              data_type: string
+            - name: bid_amount
+              description: Bid monetary value.
+              data_type: float
+            - name: currency
+              description: Currency of the bid amount.
+              data_type: string
+            - name: bid_ranking
+              description: Ranking of the suppliers who bid for the given procurement according to the bid amount. Ranking 1 is the highest bid.
+              data_type: integer
