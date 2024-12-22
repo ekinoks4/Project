@@ -1,0 +1,14 @@
+macros:
+  - name: unpack_bid_data
+    description: This macro unpacks source bid data.
+    arguments:
+      - name: data
+        type: string
+        description: name of the column which keeps the bid JSONs.
+
+  - name: unpack_procurement_json
+    description: This macro unpacks source procurement data.
+    arguments:
+      - name: data
+        type: string
+        description: name of the column which keeps the procurement JSONs.
