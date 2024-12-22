@@ -42,6 +42,6 @@ Custom macros are added to unpack json data exist in the source data.
 2. Save the externally provided profiles.yml file in the downloaded project folder. 
 3. In your local IDE, open the terminal and run `pip install dbt-core dbt-snowflake`
 4. Now, you are ready to run this dbt project. You can:
-    - run `dbt doc generate` to create documantation files
-    - run `dbt doc serve` to open created files. This command will open the documentation site in your default browser.
+    - run `dbt docs generate` to create documantation files
+    - run `dbt docs serve` to open created files. This command will open the documentation site in your default browser.
     - run `dbt build` to run the models and the tests. 
