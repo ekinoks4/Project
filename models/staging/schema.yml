@@ -21,6 +21,8 @@ models:
         data_type: string
         constraints:
           - type: not_null
+        tests:
+          - unique
       - name: procurement_number
         description: Number of the Procurement the bid is related with.
         data_type: integer
