@@ -19,8 +19,8 @@ A 3 layer structure is designed for the data model, staging, intermediate and ma
 #### project/models/staging
 The goal in this layer is to keep source data as raw as possible. 
 JSON data in the source tables in snowflake database is unpacked to a tabular form at staging.
-It is done thanks to custom macros. Filtering and cleaning operations are no applied.
-The ouput of staging is two tables, one keeping the data from procurement source and one keeping the data from bid sources. 
+It is done thanks to custom macros. Filtering and cleaning operations are not applied.
+Staging has 2 output tables, one keeping the data from procurement source and one keeping the data from bid sources. 
 Data contracts are enforced in both outputs.
 #### project/models/intermediate
 The goal of this layer is to clean and process staging models. 
@@ -38,9 +38,9 @@ Due to the limitations in the data contract enforcement in snowflake database, s
 Custom macros are added to unpack json data exist in the source data.
 
 ## How to work in your local IDE?
-1. Downlaod the project from github
+1. Downlaod this project
 2. Save the externally provided profiles.yml file in the downloaded project folder. 
-3. In your local IDE, open terminal and run `pip install dbt-core dbt-snowflake`
+3. In your local IDE, open the terminal and run `pip install dbt-core dbt-snowflake`
 4. Now, you are ready to run this dbt project. You can:
     - run `dbt doc generate` to create documantation files
     - run `dbt doc serve` to open created files. This command will open the documentation site in your default browser.
