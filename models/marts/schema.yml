@@ -53,6 +53,7 @@ models:
     tests:
       - unique:
           column_name: "(procurement_number || '-' || source)"
+          name: test_if_procurement_number_and_source_unique
     columns:
       - name: procurement_number
         description: Number of the Procurement the bid is related with

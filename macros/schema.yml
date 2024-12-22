@@ -1,5 +1,5 @@
 macros:
-  - name: unpack_bid_data
+  - name: unpack_bid_json
     description: This macro unpacks source bid data.
     arguments:
       - name: data
